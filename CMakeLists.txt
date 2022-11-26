@@ -1,8 +1,12 @@
 cmake_minimum_required(VERSION 3.0)
 project(cgeodesy)
 
-add_subdirectory(ctest)
-add_subdirectory(cmat)
+if (NOT TARGET ctest)
+    add_subdirectory(ctest)
+endif()
+if (NOT TARGET cmat)
+    add_subdirectory(cmat)
+endif()
 
 include_directories(include)
 add_library(${PROJECT_NAME}
