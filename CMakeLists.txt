@@ -10,7 +10,8 @@ endif()
 
 include_directories(include)
 add_library(${PROJECT_NAME}
-        src/ellipsoid.c)
+        src/ellipsoid.c
+        src/geodetic_position.c)
 target_include_directories(${PROJECT_NAME}
         PUBLIC
         include)
