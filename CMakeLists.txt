@@ -2,10 +2,10 @@ cmake_minimum_required(VERSION 3.0)
 project(cgeodesy)
 
 if (NOT TARGET ctest)
-    add_subdirectory(ctest)
+    add_subdirectory(../ctest ${PROJECT_BINARY_DIR}/ctest)
 endif()
 if (NOT TARGET cmat)
-    add_subdirectory(cmat)
+    add_subdirectory(../cmat ${PROJECT_BINARY_DIR}/cmat)
 endif()
 
 include_directories(include)
